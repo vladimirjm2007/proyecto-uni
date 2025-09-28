@@ -1,0 +1,428 @@
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9fafb;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Pantalla de login */
+.full-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom right, #e0f2fe, #e0e7ff);
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 32px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.logo {
+    background: linear-gradient(to right, #4f46e5, #7e3af2);
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    color: white;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2937;
+    margin: 8px 0;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #4f46e5, #7e3af2);
+    color: white;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background: white;
+    color: #4f46e5;
+    border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+    background: #f3f4f6;
+}
+
+.btn-text {
+    background: none;
+    color: #4b5563;
+    padding: 8px 16px;
+}
+
+.btn-text:hover {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+.credentials-info {
+    text-align: center;
+    margin-top: 24px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.credential {
+    font-weight: 500;
+    color: #1f2937;
+    margin: 4px 0;
+}
+
+/* Dashboard */
+.header {
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Diseño del dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.sidebar {
+    grid-column: 1;
+}
+
+.main-panel {
+    grid-column: 1;
+}
+
+.balance-card {
+    background: linear-gradient(to right, #4f46e5, #7e3af2);
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+    padding: 24px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.balance-amount {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.loan-card, .transfer-card, .transactions-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    color: #4f46e5;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #374151;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.currency-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    pointer-events: none;
+}
+
+.input-with-icon input {
+    padding-left: 40px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.transactions-list {
+    list-style: none;
+}
+
+.transaction-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transaction-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transaction-details {
+    display: flex;
+    align-items: center;
+}
+
+.transaction-description {
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+.transaction-date {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.transaction-amount {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.transaction-in {
+    color: #10b981;
+}
+
+.transaction-out {
+    color: #ef4444;
+}
+
+.transaction-loan {
+    color: #8b5cf6;
+}
+
+.transaction-tax {
+    color: #3b82f6;
+}
+
+.transaction-payment {
+    color: #6366f1;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.transaction-count {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.section-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    height: 8px;
+    margin: 8px 0 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4f46e5;
+    border-radius: 4px;
+}
+
+.loan-info {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .sidebar {
+        grid-column: 1;
+    }
+    
+    .main-panel {
+        grid-column: 2;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .full-screen {
+        padding: 40px;
+    }
+    
+    .login-card {
+        padding: 40px;
+    }
+}

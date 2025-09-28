@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banca Digital</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="login-screen" class="full-screen">
+        <div class="container">
+            <div class="card login-card">
+                <div class="logo-container">
+                    <div class="logo">
+                        <svg data-lucide="file-text" class="logo-icon"></svg>
+                    </div>
+                    <h2 class="title">Banca Digital</h2>
+                    <p class="subtitle">Sistema de gestión financiera avanzada</p>
+                </div>
+
+                <form id="login-form" class="login-form">
+                    <div class="input-group">
+                        <input
+                            id="username"
+                            name="username"
+                            type="text"
+                            required
+                            class="input-field"
+                            placeholder="Usuario (usuario1 o usuario2)"
+                        >
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            required
+                            class="input-field"
+                            placeholder="Contraseña (1234)"
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    
+                    <div class="credentials-info">
+                        <p>Pruebe con:</p>
+                        <p class="credential">usuario1 / 1234</p>
+                        <p class="credential">usuario2 / 1234</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="dashboard-screen" class="hidden">
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <svg data-lucide="file-text" class="logo-icon"></svg>
+                        <h1 class="title">Banca Digital - <span id="current-user"></span></h1>
+                    </div>
+                    <button id="logout-button" class="btn btn-text">
+                        <svg data-lucide="log-out" class="icon"></svg>
+                        Cerrar sesión
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="dashboard-grid">
+                    <aside class="sidebar">
+                        <div class="card balance-card">
+                            <h2 class="card-title">Saldo Disponible</h2>
+                            <p id="balance-display" class="balance-amount">$5,000.00</p>
+                            <div class="button-group">
+                                <button id="process-monthly" class="btn btn-secondary">Procesar Mensual</button>
+                                <button id="generate-statement" class="btn btn-primary">Estado de Cuenta</button>
+                            </div>
+                        </div>
+
+                        <div class="card loan-card">
+                            <div class="section-header">
+                                <svg data-lucide="credit-card" class="icon"></svg>
+                                <h2 class="section-title">Solicitar Préstamo</h2>
+                            </div>
+                            <form id="loan-form">
+                                <div class="form-group">
+                                    <label for="loanAmount" class="form-label">Monto solicitado</label>
+                                    <div class="input-with-icon">
+                                        <span class="currency-icon">$</span>
+                                        <input
+                                            type="number"
+                                            name="loanAmount"
+                                            id="loanAmount"
+                                            placeholder="1000"
+                                            min="100"
+                                            step="100"
+                                            required
+                                        >
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Solicitar Préstamo</button>
+                            </form>
+                            
+                            <div id="loans-container" class="loans-section hidden">
+                                <h3 class="section-subtitle">Préstamos Activos</h3>
+                                <div id="loans-list"></div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <div class="main-panel">
+                        <div class="card transfer-card">
+                            <div class="section-header">
+                                <svg data-lucide="send" class="icon"></svg>
+                                <h2 class="section-title">Realizar Transferencia</h2>
+                            </div>
+                            <form id="transfer-form">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="recipient" class="form-label">Destinatario</label>
+                                        <select id="recipient">
+                                            <option value="usuario1">usuario1</option>
+                                            <option value="usuario2">usuario2</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="amount" class="form-label">Monto</label>
+                                        <div class="input-with-icon">
+                                            <span class="currency-icon">$</span>
+                                            <input
+                                                type="number"
+                                                name="amount"
+                                                id="transferAmount"
+                                                placeholder="100.00"
+                                                min="0.01"
+                                                step="0.01"
+                                                required
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Transferir</button>
+                            </form>
+                        </div>
+
+                        <div class="card transactions-card">
+                            <div class="card-header">
+                                <div class="header-left">
+                                    <svg data-lucide="file-text" class="icon"></svg>
+                                    <h2 class="card-title">Historial de Transacciones</h2>
+                                </div>
+                                <span id="transaction-count" class="transaction-count">Últimas 1 transacciones</span>
+                            </div>
+                            
+                            <ul id="transactions-list" class="transactions-list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js.js"></script>
+</body>
+</html>

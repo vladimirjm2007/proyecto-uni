@@ -9,7 +9,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f9fafb;
+    background-color: #9495968f;
 }
 
 .container {
@@ -48,7 +48,7 @@ body {
 }
 
 .logo {
-    background: linear-gradient(to right, #e01721, #d31111);
+    background: linear-gradient(to right, #ff000d, #d31111);
     width: 64px;
     height: 64px;
     border-radius: 16px;
@@ -109,7 +109,7 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(to right, #dd1616, #b80b0b);
+    background: linear-gradient(to right, #ff0000, #ff0000);
     color: white;
     width: 100%;
 }
@@ -121,13 +121,15 @@ body {
 }
 
 .btn-secondary {
-    background: white;
-    color: #dd1d1d;
-    border: 1px solid #d1d5db;
+    background: rgb(253, 0, 0);
+    color: #ffffff;
+     width: 100%;
 }
 
 .btn-secondary:hover {
-    background: #f3f4f6;
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .btn-text {
@@ -184,10 +186,10 @@ body {
 }
 
 .balance-card {
-    background: linear-gradient(to right, #df0b0b, #d31b1b);
+    background: linear-gradient(to right, #ffffff, #ffffff);
     border-radius: 20px;
     overflow: hidden;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 24px;
 }
 
